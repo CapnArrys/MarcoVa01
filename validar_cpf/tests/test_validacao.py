@@ -12,8 +12,7 @@ def teste_cpf_letra():
     assert validar_cpf("abc.def.ghi-jk") == False 
 
 def teste_cpf_vazio():
-    with pytest.raises(ValueError):
-        validar_cpf("")
+    assert validar_cpf("") == False
 
 def teste_cpf_int():
     with pytest.raises(TypeError):
